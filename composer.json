@@ -1,0 +1,51 @@
+{
+  "name": "karbowiak/eveauth",
+  "description": "Authentication system for EVE-Online",
+  "license": "MIT",
+  "type": "project",
+  "keywords": ["slim-framework", "authentication", "eve", "eveonline"],
+  "authors": [
+    {
+      "name": "Michael Karbowiak",
+      "email": "karbowiak@gmail.com",
+      "homepage": "http://karbowiak.dk"
+    },
+    {
+      "name": "Bob Sardinia",
+      "email": "supernfadmin@gmail.com",
+      "homepage": "https://github.com/shibdib",
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "EVEAuth\\": [
+        "src/"
+      ]
+    }
+  },
+  "require": {
+    "php": ">=5.5.0",
+    "slim/slim": "^3.0",
+    "slim/twig-view": "^2.0",
+    "slim/flash": "^0.1.0",
+    "slim/csrf": "^0.6",
+    "zeuxisoo/slim-whoops": "^0.5",
+    "monolog/monolog": "^1.13",
+    "illuminate/database": "^5.2",
+    "davedevelopment/phpmig": "^1.2",
+    "alexgarrett/violin": "^2.2",
+    "carlosocarvalho/simple-input": "^1.0",
+    "symfony/process": "^3.0",
+    "jtrumbull/xml-parser": "dev-master",
+    "killmails/oauth2-eve": "0.2.*",
+    "3rdpartyeve/perry": "2.0.*",
+    "3rdpartyeve/phealng": "2.3.*",
+    "symfony/translation": "3.0.*",
+    "symfony/twig-bridge": "3.0.*",
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "php cli.php migrate"
+    ]
+  }
+}
